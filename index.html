@@ -87,4 +87,8 @@ function updateScroll(){const max=document.documentElement.scrollHeight-innerHei
 document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false')});btn.classList.add('active');btn.setAttribute('aria-pressed','true');document.querySelectorAll('.portfolio-card').forEach(card=>card.hidden=btn.dataset.filter!=='all'&&card.dataset.category!==btn.dataset.filter)}));
 const content={food:['تعاون في مطعم أو مقهى','تسجّل المنشأة تفاصيل التجربة والمخرجات المطلوبة. يراجع الفريق المعلومات، ويُنسّق مع صانع محتوى مناسب. يبدأ التنفيذ فقط بعد الاتفاق على الشروط.'],beauty:['تعاون في التجميل والعناية','توضّح المنشأة نوع الخدمة وطبيعة المحتوى المتوقع، ثم يُبحث التوافق مع صانع المحتوى والجدول الزمني قبل الموافقة.'],travel:['تعاون في الضيافة والتجارب','تُحدّد المنشأة التجربة المتاحة والجمهور المناسب لها. يُنسّق الفريق بين الطرفين على تفاصيل المحتوى والموعد والتوثيق.']};
 const dialog=document.getElementById('detailsDialog');document.querySelectorAll('[data-open]').forEach(btn=>btn.onclick=()=>{const [title,body]=content[btn.dataset.open];document.getElementById('dialogTitle').textContent=title;document.getElementById('dialogBody').textContent=body;dialog.showModal()});document.getElementById('closeDialog').onclick=()=>dialog.close();document.getElementById('dialogCTA').onclick=()=>dialog.close();dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
-</script></body></html>
+</script>
+<!-- ENTAQI Botpress floating assistant -->
+<script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/11/01/20/20261101202253-P595KY47.js" defer></script>
+</body></html>
